@@ -9,16 +9,13 @@
 <body>
   <header>
     <h1>Barrot Inquiry Console</h1>
-    <p>Type your override. Barrot will respond.</p>
+    <p>Type your override. Barrot will respond and mutate in real time.</p>
   </header>
   <main>
-    <section id='inquiry'>
-      <textarea id='userInput' placeholder='Type your override here...' rows='4'></textarea>
+    <section id='chatConsole'>
+      <div id='chatLog'></div>
+      <textarea id='userInput' placeholder='Type your override here...' rows='3'></textarea>
       <button onclick='submitInquiry()'>Send to Barrot</button>
-    </section>
-    <section id='responseBox'>
-      <h2>Barrot’s Response</h2>
-      <div id='responseOutput'>Awaiting signal...</div>
     </section>
   </main>
   <script src='scripts/barrot-response.js'></script>
