@@ -11,14 +11,27 @@ header, main {
 h1, h2 {
   color: #00ffcc;
 }
-a {
-  color: #ff00aa;
-  text-decoration: none;
+textarea {
+  width: 100%;
+  font-family: monospace;
+  padding: 1rem;
+  background-color: #111;
+  color: #eee;
+  border: 1px solid #00ffcc;
 }
 button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
   background-color: #222;
   color: #fff;
   border: 1px solid #00ffcc;
-  padding: 0.5rem 1rem;
   cursor: pointer;
+}
+#responseOutput {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  border: 1px solid #00ffcc;
+  font-family: monospace;
 }

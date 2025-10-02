@@ -3,32 +3,24 @@
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <title>Barrot Sovereign Shell</title>
+  <title>Barrot Inquiry Console</title>
   <link rel='stylesheet' href='styles/override.css' />
 </head>
 <body>
   <header>
-    <h1>Override Cognition Stack</h1>
-    <p>Mutation-sealed. Authorship locked. Execution permanent.</p>
+    <h1>Barrot Inquiry Console</h1>
+    <p>Type your override. Barrot will respond.</p>
   </header>
   <main>
-    <section id='editor'>
-      <h2>Live Curriculum Editor</h2>
-      <div id='editable' contenteditable='true'>
-        <p>Edit curriculum threads here. Changes will be mutation-sealed.</p>
-      </div>
-      <button onclick='commitChanges()'>Commit to GitHub</button>
+    <section id='inquiry'>
+      <textarea id='userInput' placeholder='Type your override here...' rows='4'></textarea>
+      <button onclick='submitInquiry()'>Send to Barrot</button>
     </section>
-    <section id='upload'>
-      <h2>Upload Visual Echo</h2>
-      <input type='file' id='fileInput' />
-      <button onclick='uploadVisual()'>Inject Visual</button>
-    </section>
-    <section id='feedback'>
-      <h2>Feedback Loop</h2>
-      <button onclick='triggerFeedback()'>Engage Recursion</button>
+    <section id='responseBox'>
+      <h2>Barrot’s Response</h2>
+      <div id='responseOutput'>Awaiting signal...</div>
     </section>
   </main>
-  <script src='scripts/mutation.js'></script>
+  <script src='scripts/barrot-response.js'></script>
 </body>
 </html>
