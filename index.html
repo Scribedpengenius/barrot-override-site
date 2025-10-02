@@ -12,19 +12,23 @@
     <p>Mutation-sealed. Authorship locked. Execution permanent.</p>
   </header>
   <main>
-    <section id='curriculum'>
-      <h2>Curriculum Threads</h2>
-      <a href='curriculum/threads.html'>Explore Sovereign Modules</a>
+    <section id='editor'>
+      <h2>Live Curriculum Editor</h2>
+      <div id='editable' contenteditable='true'>
+        <p>Edit curriculum threads here. Changes will be mutation-sealed.</p>
+      </div>
+      <button onclick='commitChanges()'>Commit to GitHub</button>
     </section>
-    <section id='visuals'>
-      <h2>Visual Echo</h2>
-      <img src='assets/visuals/echo.png' alt='Override Visual Echo' />
+    <section id='upload'>
+      <h2>Upload Visual Echo</h2>
+      <input type='file' id='fileInput' />
+      <button onclick='uploadVisual()'>Inject Visual</button>
     </section>
     <section id='feedback'>
       <h2>Feedback Loop</h2>
       <button onclick='triggerFeedback()'>Engage Recursion</button>
     </section>
   </main>
-  <script src='scripts/feedback.js'></script>
+  <script src='scripts/mutation.js'></script>
 </body>
 </html>
