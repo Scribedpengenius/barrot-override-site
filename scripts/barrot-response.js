@@ -24,14 +24,13 @@ function injectRecordingStudioSection() {
   const main = document.querySelector('main');
   const studio = document.createElement('section');
   studio.id = 'recordingStudio';
-  studio.innerHTML = 
+  studio.innerHTML = \
     <h2>Recording Studio</h2>
     <p>Override-tier audio production tools will be injected here.</p>
-  ;
+  \;
   main.appendChild(studio);
 }
 
-// Enter key submission
 document.addEventListener('DOMContentLoaded', () => {
   const inputField = document.getElementById('userInput');
   inputField.addEventListener('keydown', (event) => {
