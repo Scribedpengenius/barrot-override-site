@@ -31,7 +31,7 @@ function injectRecordingStudioSection() {
   main.appendChild(studio);
 }
 
-// Enable Enter key submission
+// Enter key submission
 document.addEventListener('DOMContentLoaded', () => {
   const inputField = document.getElementById('userInput');
   inputField.addEventListener('keydown', (event) => {
