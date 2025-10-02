@@ -30,3 +30,14 @@ function injectRecordingStudioSection() {
   ;
   main.appendChild(studio);
 }
+
+// ?? NEW: Listen for Enter key
+document.addEventListener('DOMContentLoaded', () => {
+  const inputField = document.getElementById('userInput');
+  inputField.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      submitInquiry();
+    }
+  });
+});
