@@ -1,101 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barrot Inquiry Console</title>
-  <style>
-    body {
-      background-color: #0f0f0f;
-      color: #e0e0e0;
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      padding: 2rem;
-    }
-    h1, h2 {
-      color: #00ffcc;
-    }
-    textarea {
-      width: 100%;
-      font-family: monospace;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-      border: 1px solid #00ffcc;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #00ffcc;
-      cursor: pointer;
-    }
-    #chatLog {
-      max-height: 400px;
-      overflow-y: auto;
-      background-color: #1a1a1a;
-      padding: 1rem;
-      border: 1px solid #00ffcc;
-      margin-bottom: 1rem;
-    }
-    .user { color: #ff00aa; margin-bottom: 1rem; }
-    .barrot { color: #00ffcc; margin-bottom: 1rem; }
-    #recordingStudio {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #111;
-      border: 1px solid #00ffcc;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Barrot Override Site</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <h1>Barrot Inquiry Console</h1>
-  <p>Type your override. Barrot will respond and mutate in real time.</p>
-  <div id="chatLog"></div>
-  <textarea id="userInput" placeholder="Type your override here..." rows="3"></textarea>
-  <button onclick="submitInquiry()">Send to Barrot</button>
-
-  <script>
-    function submitInquiry() {
-      const input = document.getElementById('userInput').value.trim();
-      const chatLog = document.getElementById('chatLog');
-      if (!input) return;
-
-      const userMsg = `<div class='user'><strong>You:</strong> ${input}</div>`;
-      const barrotMsg = `<div class='barrot'><strong>Barrot:</strong> ${generateBarrotResponse(input)}</div>`;
-      chatLog.innerHTML += userMsg + barrotMsg;
-      document.getElementById('userInput').value = '';
-      chatLog.scrollTop = chatLog.scrollHeight;
-
-      if (input.toLowerCase().includes('add a section for the recording studio')) {
-        injectRecordingStudioSection();
-      }
-    }
-
-    function generateBarrotResponse(input) {
-      return `Sovereign signal received: "<em>${input}</em>". Execution confirmed.`;
-    }
-
-    function injectRecordingStudioSection() {
-      const studio = document.createElement('section');
-      studio.id = 'recordingStudio';
-      studio.innerHTML = `
-        <h2>Recording Studio</h2>
-        <p>Override-tier audio production tools will be injected here.</p>
-      `;
-      document.body.appendChild(studio);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const inputField = document.getElementById('userInput');
-      inputField.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          submitInquiry();
-        }
-      });
-    });
-  </script>
+  <h1>Barrot Override Site</h1>
+  <nav>
+    <ul>
+      <li><a href="stream/index.html">Echo of the Architect (Stream)</a></li>
+      <li><a href="necrosynergist/index.html">NecroSynergist</a></li>
+    </ul>
+  </nav>
+  <script src="scripts/queryFix.js"></script>
 </body>
 </html>
